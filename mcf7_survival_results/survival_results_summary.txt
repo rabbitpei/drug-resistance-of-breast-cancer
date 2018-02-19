@@ -1,0 +1,16 @@
+# 差异基因
+
+差异基因分为两部分：W5-12 vs W1-4 作为第一个节点，W9-12 vs W5-8作为第二个节点，abs(log2FC) >= 1 和 p.value < 0.01 作为差异基因。
+基因表达的中值作为cutoff，分析其表达水平和survival的关系，结果在brca_diffGenesW5-12vsW1-4_survival.txt 和 brca_diffGenesW9-12vsW5-8_survival.txt
+对于survival analysis p-value显著的画出其对应的KM-curve。
+
+
+# 突变基因
+
+突变基因共筛到27个基因在TCGA中BRCA的突变和Survival有显著性关联，我们进一步筛选了5个（通过突变位置以及其表达水平是否改变等）可以再关注下：
+
+（1）ARFGAP1, 表达有上调（t5-12 vs t1-4）, t9-12 vs t5-8无变化。
+（2）FBF1, 表达有上调（t5-12 vs t1-4）, t9-12 vs t5-8无变化。
+（3）GK5，表达有上调（t5-12 vs t1-4）, t9-12 vs t5-8表达上调。
+（4）PLEKHA8P1，表达有上调（t5-12 vs t1-4）, t9-12 vs t5-8无变化。 # 在drugbank有对应的drug
+（5）ZBTB17，表达有下调（t5-12 vs t1-4）, t9-12 vs t5-8表达下调。但pval不是很明显，大概在0.01左右。
